@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EDUFOCUS HOMEPAGE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/logo-solo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo-sin-sombra.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!--Style contenedor producto-->
+    <style>
+        .contenedor {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: auto;
+        }
+
+        .contenedor img {
+            width: 600px; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            margin-right: 20px; /* Espacio entre imagen y texto */
+            border-radius: 8px; /* Opcional, para esquinas redondeadas */
+        }
+
+        .texto {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Delay for each image */
+        .fade-in:nth-child(1) {
+            transition-delay: 0.5s;
+        }
+
+        .fade-in:nth-child(2) {
+            transition-delay: 1.5s;
+        }
+
+        .fade-in:nth-child(3) {
+            transition-delay: 2.5s;
+        }
+
+    </style>
+
+    <script>
+        // Detectar cuando la sección es visible en la pantalla
+        document.addEventListener("DOMContentLoaded", function () {
+            const cifrasSection = document.querySelector('.container.py-5');
+            const fadeInElements = cifrasSection.querySelectorAll('.fade-in');
+
+            // Función para verificar si la sección es visible
+            function onScroll() {
+                const sectionPosition = cifrasSection.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (sectionPosition < screenPosition) {
+                    fadeInElements.forEach(element => element.classList.add('show'));
+                    window.removeEventListener('scroll', onScroll); // Eliminar el event listener después de que se activen las animaciones
+                }
+            }
+
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+<!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+    <!-- Header
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-center">
+            <img src="assets/img/hidrobag-banner-grande.png" style="width: 400px; height: auto;">
+        </div>
+    </nav>
+    Close Header -->
+    
+    <!--GIF Banner-->
+    <div>
+        <img src="assets/img/banner-4.png" style="width: 100%; height: 100%; align-self: center;">
+    </div>
+      <!-- Sección cifras-->
+      <section class="container py-5" style="margin-top: 50px;">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1" style="margin-bottom: 50px; color: #333; text-align: center;">Facilitando el Aprendizaje</h1>
+                <p>
+                    Grabar el contenido de las clases y transcribirlo para una revisión posterior permite una mayor retención y comprensión, 
+                impulsando el aprendizaje flexible y accesible para estudiantes y profesores.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="assets/img/logo-microfono.png" class="fade-in" style="width: 300px; height: 300px;"></a>
+                <h3 class="text-center mt-3 mb-2">Captura sin Pérdidas</h3>
+                <p style="text-align: center;">Con nuestra grabación de clases, estudiantes y profesores pueden acceder a contenidos completos y sin errores 
+                    de interpretación, favoreciendo una experiencia de aprendizaje continua y sin interrupciones.</p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="assets/img/logo-transcfipcion.png" class="fade-in" style="width: 300px; height: 300px;"></a>
+                <h3 class="text-center mt-3 mb-2">Transcripciones Precisas</h3>
+                <p style="text-align: center;">Nuestra IA, impulsada por GPT-4, genera transcripciones que consideran el contexto, minimizando errores y 
+                    asegurando que la información sea fiel a la clase original para facilitar el estudio y la revisión de contenidos.</p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="assets/img/logo-infografia.png" class="fade-in" style="width: 300px; height: 300px;"></a>
+                <h3 class="text-center mt-3 mb-2">Aprendizaje Visual</h3>
+                <p style="text-align: center;">Genera infografías y mapas conceptuales personalizados, adaptados a cada clase y tipo de contenido. 
+                    Desde mapas de árbol hasta líneas de tiempo, nuestra herramienta visual potencia la comprensión y la memorización.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Fin cifras -->
+ 
+    <hr style="border-top: 2px solid #5f5f5f; width: 100%; margin: 40px auto;">
+
+
+    <!-- Start Content -->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                <img src="assets/img/logo-chat.png" alt="Descripción de la imagen" class="img-fluid" style="border-radius: 8px;">
+            </div>
+            <div class="col-12 col-md-8">
+                <h1 class="h1 mb-3">¿Por qué EduFocus?</h1>
+                <p class="text-justify mb-3">
+                    EduFocus es una herramienta educativa avanzada que captura y transforma el contenido de clases en 
+                    transcripciones precisas, respuestas instantáneas a preguntas sobre el material y mapas conceptuales 
+                    intuitivos. Diseñada para el entorno académico, EduFocus facilita el acceso y comprensión del contenido 
+                    educativo, optimizando el aprendizaje y la enseñanza.
+                </p>
+                <p class="text-justify mb-0">
+                    A diferencia de otras aplicaciones, EduFocus utiliza tecnología de vanguardia para generar 
+                    transcripciones contextualizadas que minimizan errores y conservan la intención original. Su capacidad de crear infografías y 
+                    líneas de tiempo según las necesidades específicas de los estudiantes y docentes la hace única en el mercado, promoviendo un 
+                    aprendizaje visual y adaptable. Con EduFocus, cada sesión de clase se convierte en una herramienta accesible y potente para estudiar, 
+                    repasar y profundizar en los contenidos.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Sección Por qué Hidrobag-->
+
+    <hr style="border-top: 2px solid #5f5f5f; width: 100%; margin: 40px auto;">
+    <!-- Sección equipo-->
+    <div>
+        <section class="bg-white text-dark">
+            <div class="container" style="margin: auto;">
+                <div class="row align-items-center py-5">
+                    <div class="col-md-7">
+                        <h1 class="h1" style="margin-bottom: 30px;">Nuestro Equipo</h1>                        
+                        <p style="color: #333; text-align: justify;">
+                            Somos un equipo de cuatro estudiantes de Informática de Duoc UC, unidos por nuestra pasión 
+                            por la tecnología y el deseo de mejorar el aprendizaje con soluciones innovadoras. Dos de 
+                            nuestras integrantes participaron en el Hackathon Summit País Digital 2023, organizado por 
+                            EY en colaboración con Microsoft, donde nuestra tecnología base para <bold>EduFocus</bold> fue premiada 
+                            como una de las mejores propuestas. Este logro refuerza nuestro compromiso con la calidad y la 
+                            efectividad de nuestras soluciones educativas.
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="assets/img/logo-team.png" alt="About Hero" style="width: 400px; height: 400px; margin-right: 30px; margin-left: 10%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Fin sección equipo -->
+    <hr style="border-top: 2px solid #5f5f5f; width: 100%; margin: 40px auto;">
+
+
+    <!-- Start Contact -->
+    <div class="container py-5">
+        <div class="row py-5">
+            <h1 class="h1" style="margin-bottom: 50px; color: #333; text-align: center;">Descubre EduFocus: ¡optimiza tus clases y revoluciona tu aprendizaje!</h1>
+            <form id="contactForm"class="col-md-9 m-auto" method="post" role="form">
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputname">Nombre</label>
+                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputemail">Correo</label>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Correo">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputsubject">Asunto</label>
+                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Asunto">
+                </div>
+                <div class="mb-3">
+                    <label for="inputmessage">Mensaje</label>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Escribe aquí tu pregunta o comentario" rows="8"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button type="submit" class="btn btn-info btn-lg px-3">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact -->
+    
+    <!-- Start Footer -->
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2024 Hidrobag 
+                            | Santiago de Chile</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+
+    <script>
+        // Función para validar el formulario
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+
+            // Obtener los valores de los campos
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validar los campos
+            if (!name || !email || !subject || !message) {
+                alert('Por favor, completa todos los campos.');
+            } else {
+                alert('Mensaje enviado correctamente.');
+                // Aquí puedes agregar el código para enviar el formulario a tu servidor si es necesario
+                this.submit(); // Si deseas enviar el formulario
+            }
+        });
+    </script>
+</body>
+
+</html>
